@@ -8,6 +8,7 @@
     <artifactId>TriangleWithCucumber</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    
 
     <dependencies>
         <dependency>
@@ -30,7 +31,29 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.1.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.1.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.1.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
+
 
     <build>
         <plugins>
@@ -45,6 +68,33 @@
                     <compilerArgument>-Werror</compilerArgument>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>1.4.1</version>
+            </plugin>
+            
+            <plugin>  
+   <groupId>org.codehaus.mojo</groupId>  
+   <artifactId>exec-maven-plugin</artifactId>  
+   <version>1.1.1</version>  
+   <executions>  
+    <execution>  
+     <phase>run</phase>  
+     <goals>  
+      <goal>java</goal>  
+     </goals>  
+     <configuration>  
+      <mainClass>main.main</mainClass>  
+      <arguments>  
+       <argument>arg0</argument>  
+       <argument>arg1</argument>  
+      </arguments>  
+     </configuration>  
+    </execution>  
+   </executions>  
+  </plugin>  
+            
         </plugins>
     </build>
 

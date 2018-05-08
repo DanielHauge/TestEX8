@@ -36,6 +36,33 @@ public class PolygonHandlerImpl implements PolygonHandler {
         }
     }
 
+    public String CalculateTriangleType(Polygon polygon) {
+        double[] s = polygon.sides;
+        int type = 0;
+        if (!(s[0]+s[1] > s[2] && s[0]+s[2] > s[1] && s[1]+s[2] > s[0] && s[0] > 0 && s[1] > 0 && s[2] > 0)) {
+            return "Error";
+        }
+        if (s[0] == s[1] && s[1] == s[2]) {
+            type = 2;
+        }
+        else if (s[0] == s[1] || s[1] == s[2] || s[0] == s[2]) {
+            type = 1;
+        } else {
+            type = 0;
+        }
+
+        switch (type){
+            case 0:
+                return "Scalene";
+            case 1:
+                return "Isoleces";
+            case 2:
+                return "Equileteral";
+                default: return "Error";
+        }
+
+    }
+
     /**
      * Calculates the Polygon type.
      *
