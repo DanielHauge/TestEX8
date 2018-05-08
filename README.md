@@ -32,6 +32,6 @@ See Snapshots for java example in the nps files in the repository.
 
 For pairwise testing, i've used TestPairs. Which i can see a big advantage of doing. I've used threewise so it kind of eliminated the need for it, since it generated all possible combinations anyways. But i see an advantage in using TestPair to generate mostly relevant test cases for a combination of inputs, without blowing up test cases to much.
 
-[TestPairs Input]()
+[TestPairs Input](https://github.com/DanielHauge/TestEX8/blob/master/Triangle_Tests.xml)
 
-[TestPairs Output]()
+[TestPairs Output](https://github.com/DanielHauge/TestEX8/blob/master/Triangle_Tests_Tests_Threewise.csv)
